@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>MTPainter for Safari</title>
+  
+  <link rel="stylesheet" type="text/css" href="./css/MTPainter.css">
+  
+<!--  <link rel="stylesheet" href="./css/MTPainter.css" type="text/css" media="all"> -->
+  <!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div id="wrapper">
+    <header id="menuContainer">
+      <div id="logo">MTPainter</div>
+      <ul>
+        <li id="newBtn">新規作成</li>
+        <li id="undoBtn">元に戻す</li>
+        <li id="redoBtn">やり直し</li>
+        <li>保存</li>
+      </ul>
+    </header><!-- menuContainer -->
+
+    <div id="penContainer">
+      <div id="penSize">●</div>
+    
+      <div class="slider_form" id="slider_form_1">
+        <div class="slider_bar" id="slider_bar_1">太さ</div>
+      </div>
+    
+      <div class="slider_form" id="slider_form_alpha">
+        <div class="slider_bar" id="slider_bar_alpha">濃さ</div>
+      </div>
+    
+      <div id="toolBtn">
+        <div id="penBtn">ペン</div>
+        <div id="brushBtn">ブラシ</div><br />
+        <div id="rectBtn">四角</div>
+        <div id="eraserBtn">消しゴム</div>
+      </div>
+    </div><!-- penContainer -->
+    
+    <div id="canvasArea"></div>
+  
+    <div id="toolContainer">
+      <div id="colorMenu">
+        <div id="drawColor"></div>
+        <div id="gradColor"></div>
+        <div id="changedColor"></div>
+      </div><!-- colorMenu -->
+    
+      <div id="colorBox">
+        <div class="slider_form_color" id="slider_form_red">
+          <div class="slider_bar_color" id="slider_bar_red">0</div>
+        </div>
+        <div class="slider_form_color" id="slider_form_green">
+          <div class="slider_bar_color" id="slider_bar_green">0</div>
+        </div>
+        <div class="slider_form_color" id="slider_form_blue">
+          <div class="slider_bar_color" id="slider_bar_blue">0</div>
+        </div>
+      </div><!-- colorBox -->
+      <div class="toggle-form" id="toggle-acc">
+        <div class="toggle-label">ON</div>
+        <div class="toggle-label">OFF</div>
+        <div class="toggle-bar" id="accBtn">加速度</div>
+      </div>
+      
+      <div class="toggle-form" id="toggle-grad">
+        <div class="toggle-label">ON</div>
+        <div class="toggle-label">OFF</div>
+        <div class="toggle-bar" id="gradBtn">グラデーション</div>
+      </div>
+    </div><!-- toolContainer -->
+
+    <footer><p>&copy; copyright 2011-2012 T.Hirai</p></footer>
+    
+  </div><!-- wrapper -->
+  
+  <!-- Javascript
+  ============================================================= -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="./js/jquery-1.7.2.min.js"><\/script>')</script>
+  <script src="./js/components.js"></script>
+  <script src="./js/manager.js"></script>
+  <script src="./js/painter.js"></script>
+  <script src="./js/tools.js"></script>
+  <script src="./js/MTPainter.js"></script>
+</body>
+</html>

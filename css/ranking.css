@@ -1,0 +1,49 @@
+body {
+  text-align: center;
+  width: 100%;
+  background-color: rgb(240, 240, 240);
+}
+
+#nav {
+  text-align: left;
+}
+
+#nav div {
+  width: 60px;
+  height: 40px;
+  margin-left: 10px;
+  color: #fff;
+  background-color: rgb(255, 50, 80);
+  text-align: center;
+  line-height: 40px;
+  -webkit-border-radius: 20px;
+}
+
+#nav a {
+  text-decoration: none;
+}
+
+#container {
+  width: 720px;
+  height: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10px;
+  background-color: #ffffff;
+  -webkit-border-radius: 30px;
+}
+
+.course {
+  float: left;
+  margin-left: 50px;
+}
+
+table, th, tr, td {
+  text-align: left;
+  font-size: 25px;
+  border: 1px solid #000;
+}
+
+th {
+  font-size: 20px;
+}

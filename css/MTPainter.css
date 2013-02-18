@@ -1,0 +1,344 @@
+@charset "utf-8";
+/* Initialize
+=============================================================== */
+body {
+  background-color: #f0f0f0;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+/* Components
+=============================================================== */
+#wrapper {
+  margin: 0 auto;
+  text-align: left;
+  width: 1024px;
+}
+#menuContainer {
+  background-color: #2c2c2c;
+  background: -webkit-linear-gradient(top, #333333, #222222);
+  background: -o-linear-gradient(top, #333333, #222222);
+  background: -moz-linear-gradient(top, #333333, #222222);
+  background: linear-gradient(top, #333333, #222222);
+  box-shadow: 0 1px 0 #000;
+  height: 40px;
+  width: 100%;
+}
+#menuContainer #logo {
+  border-right: solid 1px #222;
+  color: #1c1c1c;
+  float: left;
+  font-size: 1.1em;
+  font-weight: bold;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  text-shadow: -1px -1px 0 #2c2c2c;
+  width: 130px;
+}
+#menuContainer li {
+  border-right: solid 1px #222;
+  color: #fcfcfc;
+  display: block;
+  float: left;
+  line-height: 40px;
+  list-style-type: none;
+  padding: 0 2em;
+  text-align: center;
+}
+#penContainer {
+  float: left;
+  margin-top: 10px;
+  margin-left: 5px;
+  text-align: center;
+}
+#penContainer #penSize {
+  border: 1px solid #000;
+  clear: both;
+  color: #000;
+  font-size: 10px;
+  height: 100px;
+  line-height: 100px;
+  margin: 0 auto;
+  width: 100px;
+}
+#penContainer #toolBtn {
+  clear: both;
+}
+#penContainer #penBtn {
+  background: -webkit-linear-gradient(top, #f0f0f0, #b0b0b0);
+  background: -o-linear-gradient(top, #f0f0f0, #b0b0b0);
+  background: -moz-linear-gradient(top, #f0f0f0, #b0b0b0);
+  background: linear-gradient(top, #f0f0f0, #b0b0b0);
+  border: 1px solid #000;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  float: left;
+  height: 50px;
+  margin-top: 10px;
+  line-height: 50px;
+  text-align: center;
+  width: 50px;
+  background: -webkit-linear-gradient(top, #b0b0b0, #f0f0f0);
+  background: -o-linear-gradient(top, #b0b0b0, #f0f0f0);
+  background: -moz-linear-gradient(top, #b0b0b0, #f0f0f0);
+  background: linear-gradient(top, #b0b0b0, #f0f0f0);
+}
+#penContainer #brushBtn {
+  background: -webkit-linear-gradient(top, #f0f0f0, #b0b0b0);
+  background: -o-linear-gradient(top, #f0f0f0, #b0b0b0);
+  background: -moz-linear-gradient(top, #f0f0f0, #b0b0b0);
+  background: linear-gradient(top, #f0f0f0, #b0b0b0);
+  border: 1px solid #000;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  float: left;
+  height: 50px;
+  margin-top: 10px;
+  line-height: 50px;
+  text-align: center;
+  width: 50px;
+  margin-left: 10px;
+  /* .box-shadow( 0, 5px, 2px, #9f9f9f ); */
+
+}
+#penContainer #rectBtn {
+  background: -webkit-linear-gradient(top, #f0f0f0, #b0b0b0);
+  background: -o-linear-gradient(top, #f0f0f0, #b0b0b0);
+  background: -moz-linear-gradient(top, #f0f0f0, #b0b0b0);
+  background: linear-gradient(top, #f0f0f0, #b0b0b0);
+  border: 1px solid #000;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  float: left;
+  height: 50px;
+  margin-top: 10px;
+  line-height: 50px;
+  text-align: center;
+  width: 50px;
+}
+#penContainer #eraserBtn {
+  background: -webkit-linear-gradient(top, #f0f0f0, #b0b0b0);
+  background: -o-linear-gradient(top, #f0f0f0, #b0b0b0);
+  background: -moz-linear-gradient(top, #f0f0f0, #b0b0b0);
+  background: linear-gradient(top, #f0f0f0, #b0b0b0);
+  border: 1px solid #000;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  float: left;
+  height: 50px;
+  margin-top: 10px;
+  line-height: 50px;
+  text-align: center;
+  width: 50px;
+  font-size: 0.7em;
+  margin-left: 10px;
+}
+#canvasArea {
+  background-color: #ffffff;
+  border: 1px solid #000;
+  float: left;
+  height: 510px;
+  margin-left: 9px;
+  /* 10px - border-left(1px) */
+
+  margin-top: 10px;
+  width: 680px;
+}
+#canvasArea canvas {
+  /* iPadは1024x768 */
+
+}
+#toolContainer {
+  float: left;
+  margin-left: 9px;
+  text-align: center;
+}
+#toolContainer #colorMenu {
+  clear: both;
+  height: 60px;
+  width: 200px;
+}
+#toolContainer #colorMenu #drawColor {
+  background-color: #000;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  float: left;
+  height: 50px;
+  margin-left: 3px;
+  margin-top: 10px;
+  width: 50px;
+}
+#toolContainer #colorMenu #gradColor {
+  float: left;
+  height: 50px;
+  margin-top: 10px;
+  margin-left: 5px;
+  width: 80px;
+}
+#toolContainer #colorMenu #changedColor {
+  background-color: #000;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 5px 2px #9f9f9f;
+  -moz-box-shadow: 0 5px 2px #9f9f9f;
+  box-shadow: 0 5px 2px #9f9f9f;
+  float: left;
+  height: 50px;
+  margin-top: 8px;
+  margin-left: 5px;
+  width: 50px;
+}
+#toolContainer #colorBox {
+  clear: both;
+  height: 315px;
+  margin: 10px auto 0;
+  padding: 5px 0 0 3px;
+}
+footer {
+  clear: both;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  width: 100%;
+}
+footer p {
+  font-size: 0.8em;
+}
+.toggle-form {
+  background: #aaa;
+  border: 2px inset #666;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  height: 50px;
+  position: relative;
+  width: 100px;
+}
+.toggle-form .toggle-label {
+  color: #000;
+  float: left;
+  height: 50px;
+  line-height: 50px;
+  width: 50px;
+  text-align: center;
+}
+.toggle-bar {
+  background: #ddd;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 2px 0 2px #000000;
+  -moz-box-shadow: 2px 0 2px #000000;
+  box-shadow: 2px 0 2px #000000;
+  height: 50px;
+  position: absolute;
+  text-align: center;
+  width: 50px;
+  z-index: 1;
+}
+#toggle-acc {
+  line-height: 50px;
+  margin-left: 3px;
+  margin-top: 11px;
+}
+#toggle-grad {
+  margin-left: 3px;
+  margin-top: 11px;
+}
+#gradBtn {
+  font-size: 0.7em;
+  line-height: 25px;
+}
+/* スライダー class */
+.slider_form {
+  background: #aaa;
+  border: 2px inset #666;
+  -webkit-border-radius: 5px;
+}
+.slider_bar {
+  background: #ddd;
+  -webkit-box-shadow: 0px 2px 2px #000;
+  -webkit-border-radius: 5px;
+}
+.slider_form_color {
+  background: #aaa;
+  border: 2px inset #666;
+  -webkit-border-radius: 5px;
+  position: relative;
+  width: 50px;
+  height: 305px;
+}
+.slider_bar_color {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  color: #000;
+  background: #ddd;
+  -webkit-box-shadow: 0px 2px 2px #000;
+  -webkit-border-radius: 5px;
+}
+/* スライダー id */
+#slider_form_1 {
+  float: left;
+  position: relative;
+  width: 50px;
+  height: 300px;
+  margin-top: 5px;
+}
+#slider_bar_1 {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+}
+#slider_form_alpha {
+  float: left;
+  position: relative;
+  width: 50px;
+  height: 300px;
+  margin-top: 5px;
+  margin-left: 7px;
+}
+#slider_bar_alpha {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+}
+#slider_form_red {
+  float: left;
+  background: -webkit-gradient(linear, center top, center bottom, from(#000000), to(#ff0000));
+}
+#slider_form_green {
+  float: left;
+  background: -webkit-gradient(linear, center top, center bottom, from(#000000), to(#00ff00));
+  margin-left: 15px;
+}
+#slider_form_blue {
+  float: left;
+  background: -webkit-gradient(linear, center top, center bottom, from(#000000), to(#0000ff));
+  margin-left: 15px;
+}
+/* Functions
+=============================================================== */
