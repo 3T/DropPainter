@@ -5,3 +5,7 @@ DropPainter
 特徴
 ------
 ツールを「ブラシ」にし、加速度ボタンを「ON」にすると、垂れます。
+
+動作環境
+------
+Mobile Safari on iPad 
